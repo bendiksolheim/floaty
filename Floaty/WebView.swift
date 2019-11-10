@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 import WebKit
+import Fullscreen
 
 public class WebViewStore: ObservableObject {
     public let webView: WKWebView
@@ -9,6 +10,7 @@ public class WebViewStore: ObservableObject {
     
     public init(webView: WKWebView = WKWebView()) {
         self.webView = webView
+        self.webView.configuration.preferences._setFullScreenEnabled(true)
 
         func subscriber<Value>(for keyPath: KeyPath<WKWebView, Value>) -> AnyCancellable {
             return AnyCancellable(webView.publisher(for: keyPath).sink { a in self.didChange.send(); print("\(keyPath): \(a)") })
