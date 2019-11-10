@@ -11,6 +11,9 @@ public class WebViewStore: ObservableObject {
     public init(webView: WKWebView = WKWebView()) {
         self.webView = webView
         self.webView.configuration.preferences._setFullScreenEnabled(true)
+        self.webView.customUserAgent = """
+        Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.31 (KHTML, like Gecko) Version/11.0 Safari/604.1.31
+        """
 
         func subscriber<Value>(for keyPath: KeyPath<WKWebView, Value>) -> AnyCancellable {
             return AnyCancellable(webView.publisher(for: keyPath).sink { a in self.didChange.send(); print("\(keyPath): \(a)") })
