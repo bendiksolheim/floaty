@@ -14,11 +14,6 @@ struct ContentView: View {
             }
             WebView(webView: webViewStore.webView)
                 .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-        }.onAppear {
-            if let url = URL(string: "https://nrk.no") {
-                print("LOL")
-                self.webViewStore.webView.load(URLRequest(url: url))
-            }
         }
     }
     
