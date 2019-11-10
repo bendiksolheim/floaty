@@ -12,6 +12,7 @@
 		1E6F262523737A2200EB342D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F262423737A2200EB342D /* Assets.xcassets */; };
 		1E6F262823737A2200EB342D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F262723737A2200EB342D /* Preview Assets.xcassets */; };
 		1E6F262B23737A2200EB342D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6F262923737A2200EB342D /* Main.storyboard */; };
+		1EC0574B2377469800E9EE29 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC0574A2377469800E9EE29 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		1E6F262A23737A2200EB342D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E6F262C23737A2200EB342D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E6F262D23737A2200EB342D /* Floaty.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Floaty.entitlements; sourceTree = "<group>"; };
+		1EC0574A2377469800E9EE29 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1E6F262C23737A2200EB342D /* Info.plist */,
 				1E6F262D23737A2200EB342D /* Floaty.entitlements */,
 				1E6F262623737A2200EB342D /* Preview Content */,
+				1EC0574A2377469800E9EE29 /* WebView.swift */,
 			);
 			path = Floaty;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC0574B2377469800E9EE29 /* WebView.swift in Sources */,
 				1E6F262323737A1D00EB342D /* ContentView.swift in Sources */,
 				1E6F262123737A1D00EB342D /* AppDelegate.swift in Sources */,
 			);

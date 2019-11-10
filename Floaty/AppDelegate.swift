@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Floaty
-//
-//  Created by Bendik Solheim on 06/11/2019.
-//  Copyright © 2019 Bendik Solheim. All rights reserved.
-//
-
 import Cocoa
 import SwiftUI
 
@@ -28,6 +20,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
+        
+        window.level = .floating
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
