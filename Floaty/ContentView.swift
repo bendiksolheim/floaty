@@ -10,6 +10,9 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .border(Color.blue, width: 2)
             AddressBar()
+                .onHover { _ in self.uiState.addressBarVisible.toggle() }
+                .opacity(uiState.addressBarVisible ? 1 : 0)
+                .animation(.easeInOut)
                 .border(Color.red, width: 2)
                 .environmentObject(uiState)
                 .environmentObject(webViewStore)
@@ -46,4 +49,5 @@ struct AddressBar: View {
 
 class UIState: ObservableObject {
     @Published var url: String = ""
+    @Published var addressBarVisible = false
 }
