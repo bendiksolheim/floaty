@@ -17,6 +17,7 @@
 		1E7157D423788D59005329D8 /* Fullscreen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7157CC23788D59005329D8 /* Fullscreen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1E7157DA2379FAAF005329D8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7157D92379FAAF005329D8 /* ColorExtensions.swift */; };
 		1E7157DC2379FBA8005329D8 /* AddressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7157DB2379FBA8005329D8 /* AddressBar.swift */; };
+		1E7157DE237A02F2005329D8 /* CustomWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7157DD237A02F2005329D8 /* CustomWindow.swift */; };
 		1EC0574B2377469800E9EE29 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC0574A2377469800E9EE29 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		1E7157CF23788D59005329D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E7157D92379FAAF005329D8 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1E7157DB2379FBA8005329D8 /* AddressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressBar.swift; sourceTree = "<group>"; };
+		1E7157DD237A02F2005329D8 /* CustomWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWindow.swift; sourceTree = "<group>"; };
 		1EC0574A2377469800E9EE29 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,10 +109,11 @@
 				1E6F262923737A2200EB342D /* Main.storyboard */,
 				1E6F262C23737A2200EB342D /* Info.plist */,
 				1E6F262D23737A2200EB342D /* Floaty.entitlements */,
-				1E6F262623737A2200EB342D /* Preview Content */,
 				1EC0574A2377469800E9EE29 /* WebView.swift */,
 				1E7157D92379FAAF005329D8 /* ColorExtensions.swift */,
 				1E7157DB2379FBA8005329D8 /* AddressBar.swift */,
+				1E6F262623737A2200EB342D /* Preview Content */,
+				1E7157DD237A02F2005329D8 /* CustomWindow.swift */,
 			);
 			path = Floaty;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				1EC0574B2377469800E9EE29 /* WebView.swift in Sources */,
 				1E6F262323737A1D00EB342D /* ContentView.swift in Sources */,
+				1E7157DE237A02F2005329D8 /* CustomWindow.swift in Sources */,
 				1E7157DC2379FBA8005329D8 /* AddressBar.swift in Sources */,
 				1E6F262123737A1D00EB342D /* AppDelegate.swift in Sources */,
 				1E7157DA2379FAAF005329D8 /* ColorExtensions.swift in Sources */,
