@@ -15,6 +15,7 @@
 		1E7157D023788D59005329D8 /* Fullscreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7157CE23788D59005329D8 /* Fullscreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1E7157D323788D59005329D8 /* Fullscreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7157CC23788D59005329D8 /* Fullscreen.framework */; };
 		1E7157D423788D59005329D8 /* Fullscreen.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1E7157CC23788D59005329D8 /* Fullscreen.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1E7157DA2379FAAF005329D8 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7157D92379FAAF005329D8 /* ColorExtensions.swift */; };
 		1EC0574B2377469800E9EE29 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC0574A2377469800E9EE29 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		1E7157CC23788D59005329D8 /* Fullscreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Fullscreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7157CE23788D59005329D8 /* Fullscreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fullscreen.h; sourceTree = "<group>"; };
 		1E7157CF23788D59005329D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7157D92379FAAF005329D8 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		1EC0574A2377469800E9EE29 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				1E6F262D23737A2200EB342D /* Floaty.entitlements */,
 				1E6F262623737A2200EB342D /* Preview Content */,
 				1EC0574A2377469800E9EE29 /* WebView.swift */,
+				1E7157D92379FAAF005329D8 /* ColorExtensions.swift */,
 			);
 			path = Floaty;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				1EC0574B2377469800E9EE29 /* WebView.swift in Sources */,
 				1E6F262323737A1D00EB342D /* ContentView.swift in Sources */,
 				1E6F262123737A1D00EB342D /* AppDelegate.swift in Sources */,
+				1E7157DA2379FAAF005329D8 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
