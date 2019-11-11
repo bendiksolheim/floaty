@@ -8,12 +8,10 @@ struct ContentView: View {
         ZStack(alignment: .top) {
             WebView(webView: webViewStore.webView)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .border(Color.blue, width: 2)
             AddressBar()
                 .onHover { _ in self.uiState.addressBarVisible.toggle() }
                 .opacity(uiState.addressBarVisible ? 1 : 0)
                 .animation(.easeInOut)
-                .border(Color.red, width: 2)
                 .environmentObject(uiState)
                 .environmentObject(webViewStore)
         }
@@ -32,12 +30,17 @@ struct AddressBar: View {
     @EnvironmentObject var uiState: UIState
     
     var body: some View {
-        HStack {
-            TextField("URL", text: $uiState.url)
-            Button(action: goto) {
-                Text("Go")
-            }
-        }
+        Group {
+            HStack {
+                TextField("URL", text: $uiState.url)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Button(action: goto) {
+                    Text("Go")
+                }
+            }.padding(.all, 10)
+        }.background(
+            LinearGradient(gradient: Gradient(colors: [Color(hex: "2D2D2D"), Color(hex: "2D2D2D")]), startPoint: .top, endPoint: .bottom)
+        )
     }
     
     func goto() -> Void {
