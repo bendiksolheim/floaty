@@ -25,31 +25,6 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct AddressBar: View {
-    @EnvironmentObject var webViewStore: WebViewStore
-    @EnvironmentObject var uiState: UIState
-    
-    var body: some View {
-        Group {
-            HStack {
-                TextField("URL", text: $uiState.url)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button(action: goto) {
-                    Text("Go")
-                }
-            }.padding(.all, 10)
-        }.background(
-            LinearGradient(gradient: Gradient(colors: [Color(hex: "2D2D2D"), Color(hex: "2D2D2D")]), startPoint: .top, endPoint: .bottom)
-        )
-    }
-    
-    func goto() -> Void {
-        if let parsedUrl = URL(string: uiState.url) {
-            webViewStore.webView.load(URLRequest(url: parsedUrl))
-        }
-    }
-}
-
 class UIState: ObservableObject {
     @Published var url: String = ""
     @Published var addressBarVisible = false
