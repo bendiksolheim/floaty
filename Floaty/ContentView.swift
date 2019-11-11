@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     let webViewStore = WebViewStore()
-    let uiState = UIState()
+    @ObservedObject var uiState = UIState()
     
     var body: some View {
         ZStack(alignment: .top) {
