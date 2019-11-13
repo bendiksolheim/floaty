@@ -7,7 +7,7 @@ struct AddressBar: View {
     var body: some View {
         Group {
             HStack {
-                TextField("URL", text: $uiState.url)
+                TextField("URL", text: $uiState.url, onCommit: goto)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 Button(action: goto) {
                     Text("Go")
