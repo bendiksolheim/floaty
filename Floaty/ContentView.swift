@@ -4,6 +4,12 @@ struct ContentView: View {
     let webViewStore = WebViewStore()
     @ObservedObject var uiState = UIState()
     
+    let moveWindow: (_ location: CGSize) -> Void
+    
+    init(moveWindow: @escaping (_ location: CGSize) -> Void) {
+        self.moveWindow = moveWindow
+    }
+    
     var body: some View {
         ZStack(alignment: .top) {
             WebView(webView: webViewStore.webView)
@@ -14,6 +20,9 @@ struct ContentView: View {
                 .animation(.easeInOut)
                 .environmentObject(uiState)
                 .environmentObject(webViewStore)
+                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .global)
+                    .onChanged { value in self.moveWindow(value.translation) }
+                )
         }
     }
 }
@@ -21,7 +30,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(moveWindow: {v in print("\(v)")})
     }
 }
 
