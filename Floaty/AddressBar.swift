@@ -19,14 +19,16 @@ struct AddressBar: View {
     }
     
     func goto() -> Void {
-        let prefixedUrl = uiState.url.starts(with: "http")
-            ? uiState.url
-            : "https://\(uiState.url)"
-        
-        if let parsedUrl = URL(string: prefixedUrl) {
+        if let parsedUrl = parseUrl(url: uiState.url) {
             webViewStore.webView.load(URLRequest(url: parsedUrl))
         }
     }
+}
+
+func parseUrl(url: String) -> URL? {
+    url.starts(with: "http")
+        ? URL(string: url)
+        : URL(string: "https://\(url)")
 }
 
 struct AddressBar_Previews: PreviewProvider {
