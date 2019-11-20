@@ -15,7 +15,21 @@ struct ContentView: View {
             WebView(webView: webViewStore.webView)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             AddressBar()
-                .onHover { _ in self.uiState.addressBarVisible.toggle() }
+                .onHover { _ in
+                    if self.uiState.addressBarVisible {
+                        self.uiState.timer?.invalidate()
+                        self.uiState.timer = nil
+                        self.uiState.addressBarVisible.toggle()
+                    } else {
+                        if let timer = self.uiState.timer {
+                            timer.invalidate()
+                            self.uiState.timer = nil
+                        } else {
+                            self.uiState.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { _ in self.uiState.addressBarVisible.toggle() })
+                        }
+                    }
+                    
+                }
                 .opacity(uiState.addressBarVisible ? 1 : 0)
                 .animation(.easeInOut)
                 .environmentObject(uiState)
@@ -37,4 +51,5 @@ struct ContentView_Previews: PreviewProvider {
 class UIState: ObservableObject {
     @Published var url: String = ""
     @Published var addressBarVisible = false
+    @Published var timer: Timer?
 }
